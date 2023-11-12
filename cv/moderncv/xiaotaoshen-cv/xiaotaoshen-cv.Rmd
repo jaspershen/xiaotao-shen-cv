@@ -1,0 +1,91 @@
+---
+name: Xiaotao
+surname: Shen
+profilepic: xiaotaoshen.jpg
+address: "3165 Porter Dr, Palo Alto, CA 94304"
+position: "Postdoctoral Research Fellow @ Stanford University"
+phone: +1 571 267 9283
+website: "jaspershen.github.io"
+email: "shenxt@stanford.edu"
+twitter: "xiaotaoshen1990"
+github: "jaspershen"
+linkedin: "shenxt"
+date: "`r format(Sys.time(), '%B %Y')`"
+headcolor: "e3142c"
+output: vitae::moderncv
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE, warning = FALSE, message = FALSE)
+library(vitae)
+```
+
+# Research Interests
+
+* Mass Spectrometry Data Processing Algorithms and Software Development
+* Multi-omics Data Integration Methods Development
+* Aging and Neurodegenerative Diseases
+* Wearable Data and Precision Medicine
+
+# Education & Research Experiences
+
+```{r}
+library(tibble)
+tribble(
+  ~ Degree, ~ Year, ~ Institution, ~ Where,
+  "Postdoctoral Research Fellow", "2019-present", "Stanford University", "Palo Alto, USA",
+  "Ph.D.", "2013-2018", "University of Chinese Academy of Sciences", "Shanghai, China",
+  "B.S.", "2009-2013", "Inner Mongolia University", "Hohhot, China",
+) %>% 
+  detailed_entries(Degree, Year, Institution, Where)
+```
+
+# Honors & Awards
+
+```{r}
+tribble(
+  ~Year, ~Type, ~Desc,
+  2023, "Young Investigator Award", "The 3rd Chinese American Society For Mass Spectrometry Conference",
+  2023, "SPORR 2023 Rigor and Reproducibility Award", "Stanford Program on Research Rigor and Reproducibility",
+  2021, "Winner Selected by the Event Committee", "Exposome Data Challenge Event",
+  2018, "Student Travel Award for Oral Presentation", "The International Metabolomics Society",
+  2018, "International Conference Travel Award", "The Metabolites Journal",
+  2017, "China National Scholarship", "Ministry of Education of the People’s Republic of China",
+  2017, "Award for Outstanding Youth Report", "The 3rd China MS Analysis Conference",
+  2016, "Merit Student", "University of Chinese Academy of Sciences",
+  2016, "Award for Outstanding Youth Report", "The 34th China MS Society Conference",
+  2013, "Inner Mongolia Outstanding Graduate", "Inner Mongolia Autonomous Region",
+  2011, "National Encouragement Scholarship", "Inner Mongolia University"
+) %>% 
+  brief_entries(
+    Type,
+    Year, 
+    Desc
+  )
+```
+
+# Nobel Prizes
+
+```{r}
+tribble(
+  ~Year, ~Type, ~Desc,
+  1903, "Physics", "Awarded for her work on radioactivity with Pierre Curie and Henri Becquerel",
+  1911, "Chemistry", "Awarded for the discovery of radium and polonium"
+) %>% 
+  brief_entries(
+    glue::glue("Nobel Prize in {Type}"),
+    Year, 
+    Desc
+  )
+```
+
+# Publications
+
+```{r}
+library(dplyr)
+knitr::write_bib(c("vitae", "tibble"), "packages.bib")
+
+bibliography_entries("packages.bib") %>%
+  arrange(desc(author$family), issued)
+```
+

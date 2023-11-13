@@ -1,0 +1,496 @@
+%% start of file `template.tex'.
+%% Copyright 2006-2015 Xavier Danaux (xdanaux@gmail.com).
+%
+% Adapted to be an Rmarkdown template by Mitchell O'Hara-Wild
+% 8 February 2019
+%
+% This work may be distributed and/or modified under the
+% conditions of the LaTeX Project Public License version 1.3c,
+% available at http://www.latex-project.org/lppl/.
+
+
+\documentclass[11pt,a4paper,]{moderncv}
+
+% moderncv themes
+\moderncvstyle{classic}                             % style options are 'casual' (default), 'classic', 'banking', 'oldstyle' and 'fancy'
+
+\definecolor{color0}{rgb}{0,0,0}% black
+\definecolor{color1}{HTML}{e3142c}% custom
+\definecolor{color2}{rgb}{0.45,0.45,0.45}% dark grey
+
+\usepackage[scaled=0.86]{DejaVuSansMono}
+
+\providecommand{\tightlist}{%
+	\setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\def\donothing#1{#1}
+\def\emaillink#1{#1}
+
+%\nopagenumbers{}                                  % uncomment to suppress automatic page numbering for CVs longer than one page
+
+% character encoding
+%\usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+%\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+
+% adjust the page margins
+\usepackage[scale=0.75,footskip=60pt]{geometry}
+%\setlength{\hintscolumnwidth}{3cm}                % if you want to change the width of the column with the dates
+%\setlength{\makecvheadnamewidth}{10cm}            % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
+
+
+\usepackage{times}
+\renewcommand{\normalsize}{\fontsize{11}{12}\selectfont}
+
+% personal data
+\name{Xiaotao}{Shen}
+\title{Postdoctoral Researcher Stanford University}
+\address{3165 Porter Dr, Palo Alto, CA 94304}{}{}
+
+\phone[mobile]{+1 571 267 9283} % Phone number
+\email{\donothing{\href{mailto:shenxt@stanford.edu}{\nolinkurl{shenxt@stanford.edu}}}}
+ % Personal website
+\social[linkedin]{shenxt}
+\social[twitter]{xiaotaoshen1990}
+\social[github]{jaspershen}
+
+
+
+% \extrainfo{additional information}                 % optional, remove / comment the line if not wanted
+
+\photo[70pt][0.4pt]{xiaotaoshen.jpg}
+
+
+% Pandoc CSL macros
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newenvironment{CSLReferences}[3] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1 \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces\fi
+  % set entry spacing
+  \ifnum #2 > 0
+  \setlength{\parskip}{#2\baselineskip}
+  \fi
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+
+%----------------------------------------------------------------------------------
+%            content
+%----------------------------------------------------------------------------------
+\begin{document}
+%\begin{CJK*}{UTF8}{gbsn}                          % to typeset your resume in Chinese using CJK
+%-----       resume       ---------------------------------------------------------
+\makecvtitle
+
+
+
+\hypertarget{research-interests}{%
+\section{Research Interests}\label{research-interests}}
+
+\begin{itemize}
+\tightlist
+\item
+  Mass Spectrometry Data Processing Algorithms and Software Development
+\item
+  Multi-omics Data Integration Methods Development
+\item
+  Wearable Data and Precision Medicine
+\item
+  Aging and Neurodegenerative Diseases
+\item
+  Human Pregnancy-Related Disease Diagnosis and Mechanism Research
+\item
+  Environmental Health
+\end{itemize}
+
+\hypertarget{education-research-experiences}{%
+\section{Education \& Research
+Experiences}\label{education-research-experiences}}
+
+\nopagebreak
+    \cventry{2019/04-Present}{Postdoctoral Research Fellow}{Stanford University}{Palo Alto, USA}{}{\empty}
+    \cventry{2013/09-2018/12}{Ph.D.}{University of Chinese Academy of Sciences}{Shanghai, China}{}{\empty}
+    \cventry{2009/09-2013/07}{B.S.}{Inner Mongolia University}{Hohhot, China}{}{\empty}
+
+\hypertarget{honors-awards}{%
+\section{Honors \& Awards}\label{honors-awards}}
+
+\nopagebreak
+    \cvitem{2023}{Young Investigator Award. The 3rd Chinese American Society For Mass Spectrometry Conference}
+    \cvitem{2023}{SPORR 2023 Rigor and Reproducibility Award. Stanford Program on Research Rigor and Reproducibility}
+    \cvitem{2021}{Winner Selected by the Event Committee. Exposome Data Challenge Event}
+    \cvitem{2018}{Student Travel Award for Oral Presentation. The International Metabolomics Society}
+    \cvitem{2018}{International Conference Travel Award. The Metabolites Journal}
+    \cvitem{2017}{China National Scholarship. Ministry of Education of the People’s Republic of China}
+    \cvitem{2017}{Award for Outstanding Youth Report. The 3rd China MS Analysis Conference}
+    \cvitem{2016}{Merit Student. University of Chinese Academy of Sciences}
+    \cvitem{2016}{Award for Outstanding Youth Report. The 34th China MS Society Conference}
+    \cvitem{2013}{Inner Mongolia Outstanding Graduate. Inner Mongolia Autonomous Region}
+    \cvitem{2011}{National Encouragement Scholarship. Inner Mongolia University}
+
+\hypertarget{presentations}{%
+\section{Presentations}\label{presentations}}
+
+\hypertarget{oral-presentations}{%
+\subsection{Oral
+Presentations------------------------------------------------}\label{oral-presentations}}
+
+\nopagebreak
+    \cventry{2023/09}{Nonlinear Dynamic Changes During Human Aging Revealed in Multi-omics Profiles}{Bay Area Metabolism Meeting (BAMM) 2023}{Palo Alto, USA}{}{\empty}
+    \cventry{2023/08}{Multi-omics Microsampling for The Profiling of Lifestyle-Associate Changes in Health}{The 3rd Chinese American Society for Mass Spectrometry Conference}{Virtual meeting}{}{\empty}
+    \cventry{2023/06}{Multi-omics Microsampling for The Profiling of Lifestyle-Associate Changes in Health}{The 71th American Society for Mass Spectrometry Conference}{Houston, USA}{}{\empty}
+    \cventry{2023/04}{Remote and Flexible Microsampling Multi-omics for Precision Medicine}{iPOP summit}{Palo Alto, USA}{}{\empty}
+    \cventry{2023/03}{Bioinformatics Algorithm Development for Mass Spectrometry Data and its Application to Precision Medicine. Invited presentation}{Altos Labs}{Redwood City, USA}{}{\empty}
+    \cventry{2023/02}{Multi-omics Microsampling for The Profiling of Lifestyle-Associate Changes in Health}{Invited presentation}{Wuhan, China}{}{\empty}
+    \cventry{2023/02}{Multi-omics Microsampling for The Profiling of Lifestyle-Associate Changes in Health}{Stanford Postdoc Symposium}{Palo Alto, USA}{}{\empty}
+    \cventry{2022/11}{Bioinformatics Method Development for Mass Spectrometry and its Application to Precision Medicine}{Stanford CVI Early Career Research Roundtable}{Palo Alto, USA}{}{\empty}
+    \cventry{2022/10}{Deep Learning-based Pseudo-Mass Spectrometry Imaging Analysis for Precision Medicine}{CASMS Virtual Conference}{Virtual meeting}{}{\empty}
+    \cventry{2022/08}{TidyMass: An Object-oriented Reproducible Analysis Framework for LC-MS Data}{ACS Fall 2022}{Virtual meeting}{}{\empty}
+    \cventry{2021/11}{metID: an R Package for Automatable Compound Annotation for LC-MS-based Data}{The 69th American Society for Mass Spectrometry Conference}{Philadelphia, USA}{}{\empty}
+    \cventry{2021/04}{Decoding Links Between the Exposome and Health Outcomes by Multi-omics Analysis}{Exposome Data Challenge Event}{Virtual meeting}{}{\empty}
+    \cventry{2018/06}{Metabolic Reaction Network-based Recursive Metabolite Identification for Untargeted Metabolomics}{The 14th International Conference of the Metabolomics Society}{Seattle, USA}{}{\empty}
+    \cventry{2017/12}{Assessment of the Response to Neoadjuvant Chemo-Radiation in Rectal Cancer Patients based on a Metabolomics Approach}{The 3rd China Mass Spectrometry Analysis Conference}{Xiamen, China}{}{\empty}
+    \cventry{2016/09}{Normalization and Integration of Large-Scale Mass Spectrometry-based Metabolomics Data Using Support Vector Regression}{The 34th China Mass Spectrometry Society Conference}{Xining, China}{}{\empty}
+    \cventry{2016/06}{Normalization and Integration of Large-Scale MS-based Metabolomics Data Using Support Vector Regression}{The 64th American Society for Mass Spectrometry Conference}{San Antonio, USA}{}{\empty}
+
+\hypertarget{poster-presentations}{%
+\subsection{Poster
+Presentations------------------------------------------------}\label{poster-presentations}}
+
+\nopagebreak
+    \cventry{2023/09}{Nonlinear Dynamic Changes During Human Aging Revealed in Multi-omics Profiles}{Stanford Bio-X Interdisciplinary Initiatives Seed Grants Program Symposium 2023}{Stanford, USA}{}{\empty}
+    \cventry{2023/05}{TidyMass: An Object-oriented Reproducible Analysis Framework for LC-MS Data}{Stanford Data Science Conference}{Palo Alto, USA}{}{\empty}
+    \cventry{2022/09}{Deep Learning-based Pseudo-Mass Spectrometry Imaging Analysis for Precision Medicine}{Stanford Genetics Retreat 2022}{Monterey, USA}{}{\empty}
+    \cventry{2022/09}{Deep Learning-based Pseudo-Mass Spectrometry Imaging Analysis for Precision Medicine}{Bay Area Metabolism Meeting (BAMM) 2022}{Palo Alto, USA}{}{\empty}
+    \cventry{2022/06}{TidyMass An Object-oriented Reproducible Analysis Framework for LC-MS Data}{The 70th American Society for Mass Spectrometry Conference}{Minneapolis, USA}{}{\empty}
+    \cventry{2022/05}{Longitudinal Interactions Between Levels of Serum Cytokine and the Microbiome from Four Body Sites}{IMMUNOLOGY2022}{Portland, USA}{}{\empty}
+    \cventry{2021/09}{TidyMass: An Object-oriented Reproducible Analysis Framework for LC-MS Data}{Stanford Genetics Retreat 2021}{Palo Alto, USA}{}{\empty}
+    \cventry{2020/06}{Longitudinal Urine Metabolic Profiling and Gestational Age Prediction in Pregnancy}{The 17th International Conference of the Metabolomics Society}{Virtual meeting}{}{\empty}
+    \cventry{2017/06}{Metabolic Reaction Network based Metabolite Annotation in Untargeted Metabolomics}{The 13th International Conference of the Metabolomics Society}{Brisbane, Austria}{}{\empty}
+
+\hypertarget{teaching-experiences}{%
+\section{Teaching Experiences}\label{teaching-experiences}}
+
+\nopagebreak
+    \cvitem{2022/09}{LC-MS Data Processing and Analysis Using R language. Biotree Company}
+    \cvitem{2022/03}{R Language for Reproducible Data Analysis. SCPA}
+    \cvitem{2019/08-Present}{Stanford School of Medicine Intern. Stanford University}
+    \cvitem{2014/09-2014/12}{Chinese Academy of Sciences. Mass Spectrometry Analysis}
+
+\hypertarget{journal-referee}{%
+\section{Journal Referee}\label{journal-referee}}
+
+• Nature Biotechnology • Nature Communications • Briefing in
+Bioinformatics • Bioinformatics • GigaScience • PLOS one •
+Phytochemistry • Genomics, Proteomics\&Bioinformatics • Communications
+Chemistry • Communications Biology • Frontiers Molecular Biosciences •
+iMeta • Proteomics
+
+\hypertarget{volunteering}{%
+\section{Volunteering}\label{volunteering}}
+
+\nopagebreak
+    \cvitem{2023/08-Present}{Member of Editorial Board. pj Women’s Health}
+    \cvitem{2023/02-Present}{Member of Youth Editorial Board. Phenomics}
+    \cvitem{2023/01-Present}{Member of Youth Editorial Board. Brain-X}
+    \cvitem{2022/07-Present}{Member of Youth Editorial Board. iMeta}
+    \cvitem{2021/07-2022/07}{Co-Chair. Stanford Chinese Postdoctoral Association}
+    \cvitem{2020/01-2021/12}{Organizer. Stanford Chinese Postdoctoral Oral Presentation Improvement}
+    \cvitem{2019/04-2022/07}{Member. Stanford Chinese Postdoctoral Association}
+
+\hypertarget{patents}{%
+\section{Patents}\label{patents}}
+
+\hypertarget{bibliography}{}
+\leavevmode\vadjust pre{\hypertarget{ref-microsampling}{}}%
+\CSLLeftMargin{1. }%
+\CSLRightInline{Snyder, M., Kellogg, R., \& Shen, X. (2022).
+\emph{\href{}{Multi-omic sample analysis methods}}. Nature Medicine.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-pregnancy}{}}%
+\CSLLeftMargin{2. }%
+\CSLRightInline{Liang, L., Snyder, M., Shen, X., \& Chen, S. (2021).
+\emph{\href{}{Methods for evaluating gestational progress and
+applications thereof}}. Nature Medicine.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-metdna}{}}%
+\CSLLeftMargin{3. }%
+\CSLRightInline{Shen, X., \& Zhu, Z. (2019). \emph{\href{}{A method for
+metabolite annotation and dysregulated pathway analysis}}. Nature
+Medicine.}
+
+\hypertarget{publications}{%
+\section{Publications}\label{publications}}
+
+\hypertarget{firstco-first-author-publications}{%
+\subsection{First/Co-first Author
+Publications------------------------------------------------}\label{firstco-first-author-publications}}
+
+\hypertarget{bibliography}{}
+\leavevmode\vadjust pre{\hypertarget{ref-shen_multi-omics_2023}{}}%
+\CSLLeftMargin{1. }%
+\CSLRightInline{Shen, X., Kellogg, R., Panyard, D. J., Bararpour, N.,
+Castillo, K. E., Lee-McMullen, B., Delfarah, A., Ubellacker, J., Ahadi,
+S., Rosenberg-Hasson, Y., Ganz, A., Contrepois, K., Michael, B., Simms,
+I., Wang, C., Hornburg, D., \& Snyder, M. P. (2023). Multi-omics
+microsampling for the profiling of lifestyle-associated changes in
+health. \emph{Nature Biomedical Engineering}, 1--19.
+\url{https://doi.org/10.1038/s41551-022-00999-8}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-shen_deep_2022}{}}%
+\CSLLeftMargin{2. }%
+\CSLRightInline{Shen, X., Shao, W., Wang, C., Liang, L., Chen, S.,
+Zhang, S., Rusu, M., \& Snyder, M. P. (2022). Deep learning-based
+pseudo-mass spectrometry imaging analysis for precision medicine.
+\emph{Briefings in Bioinformatics}, \emph{23}(5), bbac331.
+\url{https://doi.org/10.1093/bib/bbac331}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-shen_massdatabase_2022}{}}%
+\CSLLeftMargin{3. }%
+\CSLRightInline{Shen, X., Wang, C., \& Snyder, M. P. (2022).
+massDatabase: Utilities for the operation of the public compound and
+pathway database. \emph{Bioinformatics}, \emph{38}(19), 4650--4651.
+\url{https://doi.org/10.1093/bioinformatics/btac546}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-shen_tidymass_2022}{}}%
+\CSLLeftMargin{4. }%
+\CSLRightInline{Shen, X., Yan, H., Wang, C., Gao, P., Johnson, C. H., \&
+Snyder, M. P. (2022). TidyMass an object-oriented reproducible analysis
+framework for LCMS data. \emph{Nature Communications}, \emph{13}(1),
+4365. \url{https://doi.org/10.1038/s41467-022-32155-w}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-gao_precision_2022}{}}%
+\CSLLeftMargin{5. }%
+\CSLRightInline{Gao, P., Shen, X., Zhang, X., Jiang, C., Zhang, S.,
+Zhou, X., Schüssler-Fiorenza Rose, S. M., \& Snyder, M. (2022).
+Precision environmental health monitoring by longitudinal exposome and
+multi-omics profiling. \emph{Genome Research}, \emph{32}(6), 1199--1214.
+\url{https://doi.org/10.1101/gr.276521.121}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-shen_metid_2022}{}}%
+\CSLLeftMargin{6. }%
+\CSLRightInline{Shen, X., Wu, S., Liang, L., Chen, S., Contrepois, K.,
+Zhu, Z.-J., \& Snyder, M. (2022). metID: An R package for automatable
+compound annotation for LC-MS-based data. \emph{Bioinformatics},
+\emph{38}(2), 568--569.
+\url{https://doi.org/10.1093/bioinformatics/btab583}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-shen_metabolic_2019}{}}%
+\CSLLeftMargin{7. }%
+\CSLRightInline{Shen, X., Wang, R., Xiong, X., Yin, Y., Cai, Y., Ma, Z.,
+Liu, N., \& Zhu, Z.-J. (2019). Metabolic reaction network-based
+recursive metabolite annotation for untargeted metabolomics.
+\emph{Nature Communications}, \emph{10}(1), 1516.
+\url{https://doi.org/10.1038/s41467-019-09550-x}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-shen_metflow_2019}{}}%
+\CSLLeftMargin{8. }%
+\CSLRightInline{Shen, X., \& Zhu, Z.-J. (2019). MetFlow: An interactive
+and integrated workflow for metabolomics data cleaning and differential
+metabolite discovery. \emph{Bioinformatics}, \emph{35}(16), 2870--2872.
+\url{https://doi.org/10.1093/bioinformatics/bty1066}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-jia_predicting_2018}{}}%
+\CSLLeftMargin{9. }%
+\CSLRightInline{Jia, H., Shen, X., Guan, Y., Xu, M., Tu, J., Mo, M.,
+Xie, L., Yuan, J., Zhang, Z., Cai, S., Zhu, J., \& Zhu, Z. (2018).
+Predicting the pathological response to neoadjuvant chemoradiation using
+untargeted metabolomics in locally advanced rectal cancer.
+\emph{Radiotherapy and Oncology}, \emph{128}(3), 548--556.
+\url{https://doi.org/10.1016/j.radonc.2018.06.022}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-wang_serum_2016}{}}%
+\CSLLeftMargin{10. }%
+\CSLRightInline{Wang, J., Zhang, T., Shen, X., Liu, J., Zhao, D., Sun,
+Y., Wang, L., Liu, Y., Gong, X., Liu, Y., Zhu, Z.-J., \& Xue, F. (2016).
+Serum metabolomics for early diagnosis of esophageal squamous cell
+carcinoma by UHPLC-QTOF/MS. \emph{Metabolomics}, \emph{12}(7), 116.
+\url{https://doi.org/10.1007/s11306-016-1050-5}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-shen_normalization_2016}{}}%
+\CSLLeftMargin{11. }%
+\CSLRightInline{Shen, X., Gong, X., Cai, Y., Guo, Y., Tu, J., Li, H.,
+Zhang, T., Wang, J., Xue, F., \& Zhu, Z.-J. (2016). Normalization and
+integration of large-scale metabolomics data using support vector
+regression. \emph{Metabolomics}, \emph{12}(5), 89.
+\url{https://doi.org/10.1007/s11306-016-1026-5}}
+
+\hypertarget{collaborative-publications}{%
+\subsection{Collaborative
+Publications------------------------------------------------}\label{collaborative-publications}}
+
+\hypertarget{bibliography}{}
+\leavevmode\vadjust pre{\hypertarget{ref-jain_advances_2023}{}}%
+\CSLLeftMargin{1. }%
+\CSLRightInline{Jain, S., Pei, L., Spraggins, J. M., Angelo, M., Carson,
+J. P., Gehlenborg, N., Ginty, F., Gonçalves, J. P., Hagood, J. S.,
+Hickey, J. W., Kelleher, N. L., Laurent, L. C., Lin, S., Lin, Y., Liu,
+H., Naba, A., Nakayasu, E. S., Qian, W.-J., Radtke, A., \ldots{} Snyder,
+M. P. (2023). Advances and prospects for the Human BioMolecular Atlas
+Program (HuBMAP). \emph{Nature Cell Biology}, \emph{25}(8), 1089--1100.
+\url{https://doi.org/10.1038/s41556-023-01194-w}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-wei_organism-wide_2023}{}}%
+\CSLLeftMargin{2. }%
+\CSLRightInline{Wei, W., Riley, N. M., Lyu, X., Shen, X., Guo, J., Raun,
+S. H., Zhao, M., Moya-Garzon, M. D., Basu, H., Sheng-Hwa Tung, A., Li,
+V. L., Huang, W., Wiggenhorn, A. L., Svensson, K. J., Snyder, M. P.,
+Bertozzi, C. R., \& Long, J. Z. (2023). Organism-wide,
+cell-type-specific secretome mapping of exercise training in mice.
+\emph{Cell Metabolism}, \emph{35}(7), 1261--1279.e11.
+\url{https://doi.org/10.1016/j.cmet.2023.04.011}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-maitre_state_2022}{}}%
+\CSLLeftMargin{3. }%
+\CSLRightInline{Maitre, L., Guimbaud, J.-B., Warembourg, C.,
+Güil-Oumrait, N., Petrone, P. M., Chadeau-Hyam, M., Vrijheid, M.,
+Basagaña, X., \& Gonzalez, J. R. (2022). State-of-the-art methods for
+exposure-health studies: Results from the exposome data challenge event.
+\emph{Environment International}, \emph{168}, 107422.
+\url{https://doi.org/10.1016/j.envint.2022.107422}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-zhang_multiomic_2022}{}}%
+\CSLLeftMargin{4. }%
+\CSLRightInline{Zhang, S., Cooper-Knock, J., Weimer, A. K., Shi, M.,
+Kozhaya, L., Unutmaz, D., Harvey, C., Julian, T. H., Furini, S.,
+Frullanti, E., Fava, F., Renieri, A., Gao, P., Shen, X., Timpanaro, I.
+S., Kenna, K. P., Baillie, J. K., Davis, M. M., Tsao, P. S., \& Snyder,
+M. P. (2022). Multiomic analysis reveals cell-type-specific molecular
+determinants of COVID-19 severity. \emph{Cell Systems}, \emph{13}(8),
+598--614.e6. \url{https://doi.org/10.1016/j.cels.2022.05.007}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-lv_serum_2021}{}}%
+\CSLLeftMargin{5. }%
+\CSLRightInline{Lv, J., Wang, J., Shen, X., Liu, J., Zhao, D., Wei, M.,
+Li, X., Fan, B., Sun, Y., Xue, F., Zhu, Z.-J., \& Zhang, T. (2021). A
+serum metabolomics analysis reveals a panel of screening metabolic
+biomarkers for esophageal squamous cell carcinoma. \emph{Clinical and
+Translational Medicine}, \emph{11}(5), e419.
+\url{https://doi.org/10.1002/ctm2.419}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-wei_mediation_2021}{}}%
+\CSLLeftMargin{6. }%
+\CSLRightInline{Wei, M., Zhao, L., Lv, J., Li, X., Zhou, G., Fan, B.,
+Shen, X., Zhao, D., Xue, F., Wang, J., \& Zhang, T. (2021). The
+mediation effect of serum metabolites on the relationship between
+long-term smoking exposure and esophageal squamous cell carcinoma.
+\emph{BMC Cancer}, \emph{21}(1), 415.
+\url{https://doi.org/10.1186/s12885-021-08151-6}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-li_serum_2021}{}}%
+\CSLLeftMargin{7. }%
+\CSLRightInline{Li, X., Zhao, L., Wei, M., Lv, J., Sun, Y., Shen, X.,
+Zhao, D., Xue, F., Zhang, T., \& Wang, J. (2021). Serum metabolomics
+analysis for the progression of esophageal squamous cell carcinoma.
+\emph{Journal of Cancer}, \emph{12}(11), 3190.
+\url{https://doi.org/10.7150/jca.54429}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-liang_metabolic_2020}{}}%
+\CSLLeftMargin{8. }%
+\CSLRightInline{Liang, L., Rasmussen, M.-L. H., Piening, B., Shen, X.,
+Chen, S., Röst, H., Snyder, J. K., Tibshirani, R., Skotte, L., Lee, N.
+Cy., Contrepois, K., Feenstra, B., Zackriah, H., Snyder, M., \& Melbye,
+M. (2020). Metabolic Dynamics and Prediction of Gestational Age and Time
+to Delivery in Pregnant Women. \emph{Cell}, \emph{181}(7),
+1680--1692.e15. \url{https://doi.org/10.1016/j.cell.2020.05.002}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-wang_development_2019}{}}%
+\CSLLeftMargin{9. }%
+\CSLRightInline{Wang, Z., Cui, B., Zhang, F., Yang, Y., Shen, X., Li,
+Z., Zhao, W., Zhang, Y., Deng, K., Rong, Z., Yang, K., Yu, X., Li, K.,
+Han, P., \& Zhu, Z.-J. (2019). Development of a Correlative Strategy To
+Discover Colorectal Tumor Tissue Derived Metabolite Biomarkers in Plasma
+Using Untargeted Metabolomics. \emph{Analytical Chemistry},
+\emph{91}(3), 2401--2408.
+\url{https://doi.org/10.1021/acs.analchem.8b05177}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-zhou_lipidimms_2019}{}}%
+\CSLLeftMargin{10. }%
+\CSLRightInline{Zhou, Z., Shen, X., Chen, X., Tu, J., Xiong, X., \& Zhu,
+Z.-J. (2019). LipidIMMS Analyzer: Integrating multi-dimensional
+information to support lipid identification in ion mobilitymass
+spectrometry based lipidomics. \emph{Bioinformatics}, \emph{35}(4),
+698--700. \url{https://doi.org/10.1093/bioinformatics/bty661}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-zhou_lipidccs_2017}{}}%
+\CSLLeftMargin{11. }%
+\CSLRightInline{Zhou, Z., Tu, J., Xiong, X., Shen, X., \& Zhu, Z.-J.
+(2017). LipidCCS: Prediction of Collision Cross-Section Values for
+Lipids with High Precision To Support Ion MobilityMass
+Spectrometry-Based Lipidomics. \emph{Analytical Chemistry},
+\emph{89}(17), 9559--9566.
+\url{https://doi.org/10.1021/acs.analchem.7b02625}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-zhou_large-scale_2016}{}}%
+\CSLLeftMargin{12. }%
+\CSLRightInline{Zhou, Z., Shen, X., Tu, J., \& Zhu, Z.-J. (2016).
+Large-Scale Prediction of Collision Cross-Section Values for Metabolites
+in Ion Mobility-Mass Spectrometry. \emph{Analytical Chemistry},
+\emph{88}(22), 11084--11091.
+\url{https://doi.org/10.1021/acs.analchem.6b03091}}
+
+\hypertarget{submitted-publications}{%
+\subsection{Submitted
+Publications------------------------------------------------}\label{submitted-publications}}
+
+\hypertarget{bibliography}{}
+\leavevmode\vadjust pre{\hypertarget{ref-shen_nmed_2023}{}}%
+\CSLLeftMargin{1. }%
+\CSLRightInline{Shen, X., Wang, C., Zhou, X., Zhou, W., Hornburg, D.,
+Wu, S., \& Snyder, M. (2023). \emph{\href{}{Nonlinear dynamic changes
+during human aging revealed in multi-omics profiles}}. Nature Medicine.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-shen_microbiomedataset_2023}{}}%
+\CSLLeftMargin{2. }%
+\CSLRightInline{Shen, X., \& Snyder, M. P. (2023).
+\emph{Microbiomedataset: A tidyverse-style framework for organizing and
+processing microbiome data}. bioRxiv.
+\url{https://doi.org/10.1101/2023.09.17.558096}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-xin_cell_2023}{}}%
+\CSLLeftMargin{3. }%
+\CSLRightInline{Zhou, X., Shen, X., Johnson, J., Spakowicz, D., Agnello,
+M., Zhou, W., Avina, M., Honkala, A., Chleilat, F., Chen, S., Cha, K.,
+Leopold, S., Zhu, C., Chen, L., Lyu, L., Hornburg, D., Wu, S., Zhang,
+X., Jiang, C., \ldots{} Snyder, M. (2023). \emph{\href{}{Longitudinal
+profiling of the microbiome at four body sites reveals core stability
+and individualized dynamics during health and disease}}. Cell.}
+
+\leavevmode\vadjust pre{\hypertarget{ref-ding_semi-supervised_2023}{}}%
+\CSLLeftMargin{4. }%
+\CSLRightInline{Ding, D. Y., Shen, X., Snyder, M., \& Tibshirani, R.
+(2023). \emph{Semi-supervised Cooperative Learning for Multiomics Data
+Fusion}. arXiv. \url{https://doi.org/10.48550/arXiv.2308.01458}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-chen_longitudinal_2022}{}}%
+\CSLLeftMargin{5. }%
+\CSLRightInline{Chen, S., Shen, X., Liang, L., Avina, M., Zackriah, H.,
+Jelliffe-Pawlowski, L., Rand, L., \& Snyder, M. (2022).
+\emph{Longitudinal Urine Metabolic Profiling and Gestational Age
+Prediction in Pregnancy}. bioRxiv.
+\url{https://doi.org/10.1101/2022.07.10.499478}}
+
+\leavevmode\vadjust pre{\hypertarget{ref-chen_integration_2021}{}}%
+\CSLLeftMargin{6. }%
+\CSLRightInline{Chen, S., Wang, G., Shen, X., Hornburg, D., Rego, S.,
+Hoffman, R., Nevins, S., Cheng, X., \& Snyder, M. (2021).
+\emph{Integration and comparison of multi-omics profiles of NGLY1
+deficiency plasma and cellular models to identify clinically relevant
+molecular phenotypes}. bioRxiv.
+\url{https://doi.org/10.1101/2021.05.28.446235}}
+
+
+\end{document}
+
+%\clearpage\end{CJK*}                              % if you are typesetting your resume in Chinese using CJK; the \clearpage is required for fancyhdr to work correctly with CJK, though it kills the page numbering by making \lastpage undefined
+\end{document}
+
+
+%% end of file `template.tex'.

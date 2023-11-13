@@ -3,7 +3,7 @@ name: Xiaotao
 surname: Shen
 profilepic: xiaotaoshen.jpg
 address: "3165 Porter Dr, Palo Alto, CA 94304"
-position: "Postdoctoral Research Fellow @ Stanford University"
+position: "Postdoctoral Researcher Stanford University"
 phone: +1 571 267 9283
 website: "jaspershen.github.io"
 email: "shenxt@stanford.edu"
@@ -12,7 +12,13 @@ github: "jaspershen"
 linkedin: "shenxt"
 date: "`r format(Sys.time(), '%B %Y')`"
 headcolor: "e3142c"
-output: vitae::moderncv
+output: 
+  vitae::moderncv:
+    theme: classic
+    keep_tex: true
+header-includes:
+   - \usepackage{times}
+   - \renewcommand{\normalsize}{\fontsize{11}{12}\selectfont}
 ---
 
 ```{r setup, include=FALSE}
@@ -24,26 +30,28 @@ library(vitae)
 
 * Mass Spectrometry Data Processing Algorithms and Software Development
 * Multi-omics Data Integration Methods Development
-* Aging and Neurodegenerative Diseases
 * Wearable Data and Precision Medicine
+* Aging and Neurodegenerative Diseases
+* Human Pregnancy-Related Disease Diagnosis and Mechanism Research
+* Environmental Health
 
 # Education & Research Experiences
 
 ```{r}
 library(tibble)
-tribble(
+tibble::tribble(
   ~ Degree, ~ Year, ~ Institution, ~ Where,
-  "Postdoctoral Research Fellow", "2019-present", "Stanford University", "Palo Alto, USA",
-  "Ph.D.", "2013-2018", "University of Chinese Academy of Sciences", "Shanghai, China",
-  "B.S.", "2009-2013", "Inner Mongolia University", "Hohhot, China",
+  "Postdoctoral Research Fellow", "2019/04-Present", "Stanford University", "Palo Alto, USA",
+  "Ph.D.", "2013/09-2018/12", "University of Chinese Academy of Sciences", "Shanghai, China",
+  "B.S.", "2009/09-2013/07", "Inner Mongolia University", "Hohhot, China",
 ) %>% 
-  detailed_entries(Degree, Year, Institution, Where)
+  vitae::detailed_entries(Degree, Year, Institution, Where)
 ```
 
 # Honors & Awards
 
 ```{r}
-tribble(
+tibble::tribble(
   ~Year, ~Type, ~Desc,
   2023, "Young Investigator Award", "The 3rd Chinese American Society For Mass Spectrometry Conference",
   2023, "SPORR 2023 Rigor and Reproducibility Award", "Stanford Program on Research Rigor and Reproducibility",
@@ -57,35 +65,153 @@ tribble(
   2013, "Inner Mongolia Outstanding Graduate", "Inner Mongolia Autonomous Region",
   2011, "National Encouragement Scholarship", "Inner Mongolia University"
 ) %>% 
-  brief_entries(
+  vitae::brief_entries(
     Type,
     Year, 
     Desc
   )
 ```
 
-# Nobel Prizes
+# Presentations
+
+## Oral Presentations------------------------------------------------
 
 ```{r}
-tribble(
-  ~Year, ~Type, ~Desc,
-  1903, "Physics", "Awarded for her work on radioactivity with Pierre Curie and Henri Becquerel",
-  1911, "Chemistry", "Awarded for the discovery of radium and polonium"
-) %>% 
-  brief_entries(
-    glue::glue("Nobel Prize in {Type}"),
-    Year, 
-    Desc
-  )
+tibble::tribble(
+  ~ title, ~ event, ~ where, ~ year,
+  "Nonlinear Dynamic Changes During Human Aging Revealed in Multi-omics Profiles", "Bay Area Metabolism Meeting (BAMM) 2023", "Palo Alto, USA", "2023/09",
+    "Multi-omics Microsampling for The Profiling of Lifestyle-Associate Changes in Health", "The 3rd Chinese American Society for Mass Spectrometry Conference", "Virtual meeting", "2023/08",
+  "Multi-omics Microsampling for The Profiling of Lifestyle-Associate Changes in Health", "The 71th American Society for Mass Spectrometry Conference", "Houston, USA", "2023/06", 
+  "Remote and Flexible Microsampling Multi-omics for Precision Medicine", "iPOP summit", "Palo Alto, USA", "2023/04",
+  "Bioinformatics Algorithm Development for Mass Spectrometry Data and its Application to Precision Medicine. Invited presentation", "Altos Labs", "Redwood City, USA", "2023/03",
+"Multi-omics Microsampling for The Profiling of Lifestyle-Associate Changes in Health", "Invited presentation", "Wuhan, China", "2023/02",
+"Multi-omics Microsampling for The Profiling of Lifestyle-Associate Changes in Health", "Stanford Postdoc Symposium", "Palo Alto, USA", "2023/02",
+"Bioinformatics Method Development for Mass Spectrometry and its Application to Precision Medicine", "Stanford CVI Early Career Research Roundtable", "Palo Alto, USA", "2022/11",
+"Deep Learning-based Pseudo-Mass Spectrometry Imaging Analysis for Precision Medicine", "CASMS Virtual Conference", "Virtual meeting", "2022/10",
+"TidyMass: An Object-oriented Reproducible Analysis Framework for LC-MS Data", "ACS Fall 2022", "Virtual meeting", "2022/08",
+"metID: an R Package for Automatable Compound Annotation for LC-MS-based Data", "The 69th American Society for Mass Spectrometry Conference", "Philadelphia, USA", "2021/11",
+"Decoding Links Between the Exposome and Health Outcomes by Multi-omics Analysis", "Exposome Data Challenge Event", "Virtual meeting", "2021/04",
+"Metabolic Reaction Network-based Recursive Metabolite Identification for Untargeted Metabolomics", "The 14th International Conference of the Metabolomics Society", "Seattle, USA", "2018/06",
+"Assessment of the Response to Neoadjuvant Chemo-Radiation in Rectal Cancer Patients based on a Metabolomics Approach", "The 3rd China Mass Spectrometry Analysis Conference", "Xiamen, China", "2017/12",
+"Normalization and Integration of Large-Scale Mass Spectrometry-based Metabolomics Data Using Support Vector Regression", "The 34th China Mass Spectrometry Society Conference", "Xining, China", "2016/09",
+"Normalization and Integration of Large-Scale MS-based Metabolomics Data Using Support Vector Regression", "The 64th American Society for Mass Spectrometry Conference", "San Antonio, USA", "2016/06"
+) %>%
+  vitae::detailed_entries(what = title, 
+                       when = year, 
+                       with = event, 
+                       where = where)
 ```
 
-# Publications
+## Poster Presentations------------------------------------------------
+
+```{r}
+tibble::tribble(
+  ~ title, ~ event,  ~ year, ~ where,
+"Nonlinear Dynamic Changes During Human Aging Revealed in Multi-omics Profiles", "Stanford Bio-X Interdisciplinary Initiatives Seed Grants Program Symposium 2023", "2023/09", "Stanford, USA", 
+"TidyMass: An Object-oriented Reproducible Analysis Framework for LC-MS Data", "Stanford Data Science Conference", "2023/05", "Palo Alto, USA", 
+"Deep Learning-based Pseudo-Mass Spectrometry Imaging Analysis for Precision Medicine", "Stanford Genetics Retreat 2022", "2022/09", "Monterey, USA",
+"Deep Learning-based Pseudo-Mass Spectrometry Imaging Analysis for Precision Medicine", "Bay Area Metabolism Meeting (BAMM) 2022", "2022/09", "Palo Alto, USA",
+"TidyMass An Object-oriented Reproducible Analysis Framework for LC-MS Data", "The 70th American Society for Mass Spectrometry Conference", "2022/06", "Minneapolis, USA",
+"Longitudinal Interactions Between Levels of Serum Cytokine and the Microbiome from Four Body Sites", "IMMUNOLOGY2022", "2022/05", "Portland, USA",
+"TidyMass: An Object-oriented Reproducible Analysis Framework for LC-MS Data", "Stanford Genetics Retreat 2021", "2021/09", "Palo Alto, USA",
+"Longitudinal Urine Metabolic Profiling and Gestational Age Prediction in Pregnancy", "The 17th International Conference of the Metabolomics Society", "2020/06", "Virtual meeting",
+"Metabolic Reaction Network based Metabolite Annotation in Untargeted Metabolomics", "The 13th International Conference of the Metabolomics Society", "2017/06", "Brisbane, Austria" 
+
+) %>%
+  vitae::detailed_entries(what = title, 
+                       when = year, 
+                       with = event, 
+                       where = where)
+```
+
+
+# Teaching Experiences
+
+```{r}
+library(tibble)
+tibble::tribble(
+  ~ Year, ~ Class, ~ Institution,
+  "2022/09", "LC-MS Data Processing and Analysis Using R language", "Biotree Company",
+  "2022/03", "R Language for Reproducible Data Analysis", "SCPA",
+  "2019/08-Present", "Stanford School of Medicine Intern", "Stanford University",
+  "2014/09-2014/12", "Chinese Academy of Sciences", "Mass Spectrometry Analysis"
+) %>% 
+  vitae::brief_entries(what = Class, 
+                       when = Year, 
+                       with = Institution)
+```
+
+# Journal Referee
+
+•	Nature Biotechnology
+•	Nature Communications
+•	Briefing in Bioinformatics
+•	Bioinformatics
+•	GigaScience
+•	PLOS one
+•	Phytochemistry
+•	Genomics, Proteomics&Bioinformatics
+•	Communications Chemistry
+•	Communications Biology
+•	Frontiers Molecular Biosciences
+•	iMeta
+•	Proteomics
+
+# Volunteering
+
+```{r}
+library(tibble)
+tibble::tribble(
+  ~ Year, ~ Title, ~ Institution,
+  "2023/08-Present", "Member of Editorial Board", "pj Women’s Health",
+  "2023/02-Present", "Member of Youth Editorial Board", "Phenomics",
+  "2023/01-Present", "Member of Youth Editorial Board", "Brain-X",
+  "2022/07-Present", "Member of Youth Editorial Board", "iMeta",
+  "2021/07-2022/07", "Co-Chair", "Stanford Chinese Postdoctoral Association",
+  "2020/01-2021/12", "Organizer", "Stanford Chinese Postdoctoral Oral Presentation Improvement",
+  "2019/04-2022/07", "Member", "Stanford Chinese Postdoctoral Association"
+) %>% 
+  vitae::brief_entries(what = Title, 
+                       when = Year, 
+                       with = Institution)
+```
+
+
+# Patents
 
 ```{r}
 library(dplyr)
-knitr::write_bib(c("vitae", "tibble"), "packages.bib")
-
-bibliography_entries("packages.bib") %>%
-  arrange(desc(author$family), issued)
+vitae::bibliography_entries("patents.bib") %>% 
+  arrange(desc(issued))
 ```
+
+
+# Publications
+
+## First/Co-first Author Publications------------------------------------------------
+
+```{r}
+library(dplyr)
+# knitr::write_bib(c("vitae", "tibble"), "my_publications.bib")
+
+vitae::bibliography_entries("first_author.bib") %>% 
+  arrange(desc(issued))
+```
+
+## Collaborative Publications------------------------------------------------
+
+```{r}
+library(dplyr)
+vitae::bibliography_entries("collaborative_publications.bib") %>% 
+  arrange(desc(issued))
+```
+
+## Submitted Publications------------------------------------------------
+
+```{r}
+library(dplyr)
+vitae::bibliography_entries("submitted.bib") %>% 
+  arrange(desc(issued))
+```
+
 
